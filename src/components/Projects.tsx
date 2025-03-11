@@ -109,7 +109,7 @@ const Projects = ({
     },
     {
       id: "6",
-      title: "Telex Interval Integration/Plugin",
+      title: "Codex - Interval Integration for Telex",
       description:
         "Weather application that provides current conditions and 5-day forecasts with location-based services and interactive maps. Designed for fast responses under 500ms.",
       stack: ["Python", "Flask", "Flask-CORS"],
