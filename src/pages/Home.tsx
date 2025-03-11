@@ -1,8 +1,8 @@
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
-import Timeline from "../components/Timeline";
-import Testimonials from "../components/Testimonials";
+// import Timeline from "../components/Timeline";
+// import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 
 const Home = () => {
