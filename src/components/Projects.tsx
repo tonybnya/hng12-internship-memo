@@ -112,7 +112,7 @@ const Projects = ({
       title: "Codex - Interval Integration for Telex",
       description:
         "Weather application that provides current conditions and 5-day forecasts with location-based services and interactive maps. Designed for fast responses under 500ms.",
-      stack: ["Python", "Flask", "Flask-CORS"],
+      stack: ["Python", "Flask", "Flask-CORS", "Telex Account"],
       outcomes: [
         "Built a lightweight and efficient API with Express",
         "Optimized response time to be under 500ms",
