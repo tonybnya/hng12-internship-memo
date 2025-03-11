@@ -1,7 +1,6 @@
 import { Suspense } from "react";
-import { useRoutes, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import routes from "tempo-routes";
 import Spinner from "./components/Spinner";
 
 const App = () => {

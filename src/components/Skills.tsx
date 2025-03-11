@@ -1,21 +1,7 @@
 import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
 import { cn } from "../lib/utils";
-import {
-  Code,
-  Database,
-  Globe,
-  Layout,
-  Server,
-  Smartphone,
-  Layers,
-  GitBranch,
-  FileCode,
-  Terminal,
-  Cpu,
-  Cloud,
-  Webhook,
-} from "lucide-react";
+import { Smartphone, Layers, Cpu, Webhook } from "lucide-react";
 
 interface SkillProps {
   name: string;
