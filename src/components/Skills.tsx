@@ -14,11 +14,12 @@ import {
   Terminal,
   Cpu,
   Cloud,
+  Webhook,
 } from "lucide-react";
 
 interface SkillProps {
   name: string;
-  icon: React.ReactNode;
+  icon: React.ReactNode | string;
   level?: "beginner" | "intermediate" | "advanced";
 }
 
@@ -34,7 +35,15 @@ const SkillIcon = ({ skill }: { skill: SkillProps }) => {
   return (
     <div className="flex flex-col items-center gap-2 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 w-[110px]">
       <div className="p-2 rounded-full bg-primary/5 text-primary">
-        {skill.icon}
+        {typeof skill.icon === "string" ? (
+          <img
+            src={skill.icon}
+            alt={`${skill.name} icon`}
+            className="w-6 h-6"
+          />
+        ) : (
+          skill.icon
+        )}
       </div>
       <span className="text-sm font-medium text-center">{skill.name}</span>
       {skill.level && (
@@ -58,10 +67,31 @@ const SkillsSection = ({
   title = "Technical Skills",
   subtitle = "Technologies and tools I worked with during my HNG internship",
   frontendSkills = [
-    { name: "React", icon: <Layout size={24} />, level: "advanced" },
-    { name: "TypeScript", icon: <FileCode size={24} />, level: "intermediate" },
-    { name: "Tailwind CSS", icon: <Code size={24} />, level: "advanced" },
-    { name: "Next.js", icon: <Globe size={24} />, level: "intermediate" },
+    {
+      name: "HTML",
+      icon: "/icons/html.svg",
+      level: "intermediate",
+    },
+    {
+      name: "CSS",
+      icon: "/icons/css.svg",
+      level: "intermediate",
+    },
+    {
+      name: "JavaScript",
+      icon: "/icons/js.svg",
+      level: "intermediate",
+    },
+    {
+      name: "React",
+      icon: "/icons/react.svg",
+      level: "intermediate",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: "icons/tailwind.svg",
+      level: "intermediate",
+    },
     {
       name: "Responsive Design",
       icon: <Smartphone size={24} />,
@@ -69,16 +99,64 @@ const SkillsSection = ({
     },
   ],
   backendSkills = [
-    { name: "Node.js", icon: <Server size={24} />, level: "intermediate" },
-    { name: "Express", icon: <Terminal size={24} />, level: "intermediate" },
-    { name: "MongoDB", icon: <Database size={24} />, level: "beginner" },
-    { name: "PostgreSQL", icon: <Database size={24} />, level: "beginner" },
-    { name: "RESTful APIs", icon: <Layers size={24} />, level: "intermediate" },
+    {
+      name: "Python",
+      icon: "/icons/python.svg",
+      level: "intermediate",
+    },
+    {
+      name: "Flask",
+      icon: "/icons/flask.svg",
+      level: "intermediate",
+    },
+    {
+      name: "FastAPI",
+      icon: "/icons/fastapi.svg",
+      level: "intermediate",
+    },
+    {
+      name: "SQLite",
+      icon: "/icons/sqlite.svg",
+      level: "intermediate",
+    },
+    {
+      name: "RESTful APIs",
+      icon: <Layers size={24} />,
+      level: "intermediate",
+    },
+    {
+      name: "Webhook",
+      icon: <Webhook size={24} />,
+      level: "beginner",
+    },
   ],
   otherSkills = [
-    { name: "Git", icon: <GitBranch size={24} />, level: "intermediate" },
+    {
+      name: "Git",
+      icon: "/icons/git.svg",
+      level: "intermediate",
+    },
+    {
+      name: "GitHub",
+      icon: "/icons/github.svg",
+      level: "intermediate",
+    },
+    {
+      name: "Telex",
+      icon: "/icons/telex.svg",
+      level: "intermediate",
+    },
     { name: "CI/CD", icon: <Cpu size={24} />, level: "beginner" },
-    { name: "AWS", icon: <Cloud size={24} />, level: "beginner" },
+    {
+      name: "Nginx",
+      icon: "/icons/nginx.svg",
+      level: "intermediate",
+    },
+    {
+      name: "Linode",
+      icon: "/icons/linode.svg",
+      level: "beginner",
+    },
   ],
 }: SkillsSectionProps) => {
   return (
