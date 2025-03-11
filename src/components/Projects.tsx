@@ -103,9 +103,9 @@ const Projects = ({
         "Configured Nginx as a reverse proxy for secure API access",
         "Deployed the API on a Linode VPS with optimized performance",
       ],
-      imageUrl: "",
+      imageUrl: "https://i.postimg.cc/02htFtrM/back-04.png",
       projectUrl: "https://github.com/tonybnya/fastapi-book-project",
-      liveUrl: "https://tonybnya-hng12-backend-stage01.onrender.com",
+      liveUrl: "http://172.232.44.199:8000/api/v1/books/1",
     },
     {
       id: "6",
