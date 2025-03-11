@@ -23,15 +23,15 @@ const Hero = ({
   linkedinUrl = "https://linkedin.com/in/tonybnya",
 }: HeroSectionProps) => {
   return (
-    <section className="relative w-full h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-r from-slate-900 to-slate-800">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-r from-slate-950 to-slate-900">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={backgroundImage}
           alt="Hero Background"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-10"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/90"></div>
       </div>
 
       {/* Content Container */}
@@ -72,7 +72,7 @@ const Hero = ({
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-6"
           >
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary-foreground rounded-full text-sm font-medium">
+            <span className="inline-block px-4 py-1.5 bg-primary/40 text-primary-foreground rounded-full text-sm font-medium">
               {duration}
             </span>
           </motion.div>
