@@ -7,27 +7,29 @@ import {
   CardFooter,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, CodeXml } from "lucide-react";
 
 interface ProjectCardProps {
   title?: string;
   description?: string;
-  technologies?: string[];
+  stack?: string[];
   outcomes?: string[];
   imageUrl?: string;
   projectUrl?: string;
+  liveUrl?: string;
 }
 
 const ProjectCard = ({
   title = "Project Title",
   description = "A brief description of the project, highlighting the key features and technologies used during development.",
-  technologies = ["React", "TypeScript", "Tailwind CSS"],
+  stack = ["React", "TypeScript", "Tailwind CSS"],
   outcomes = [
     "Successfully implemented responsive design",
     "Improved load time by 40%",
   ],
   imageUrl = "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&q=80",
-  projectUrl = "#",
+  projectUrl = "https://github.com/tonybnya",
+  liveUrl = "https://github.com/tonybnya",
 }: ProjectCardProps) => {
   return (
     <Card className="w-full max-w-[350px] h-full min-h-[320px] overflow-hidden flex flex-col bg-white">
@@ -42,27 +44,33 @@ const ProjectCard = ({
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
           <CardTitle className="text-xl font-bold">{title}</CardTitle>
-          {projectUrl && (
-            <a
-              href={projectUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 transition-colors"
-            >
-              <ExternalLink size={18} />
-            </a>
-          )}
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 transition-colors"
+          >
+            <ExternalLink size={18} />
+          </a>
         </div>
         <CardDescription className="mt-2 line-clamp-2">
           {description}
         </CardDescription>
+        <a
+          href={projectUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:text-primary/80 transition-colors"
+        >
+          <CodeXml size={18} />
+        </a>
       </CardHeader>
 
       <CardContent className="flex-grow">
         <div className="mb-3">
           <h4 className="text-sm font-semibold mb-2">Technologies</h4>
           <div className="flex flex-wrap gap-1.5">
-            {technologies.map((tech, index) => (
+            {stack.map((tech, index) => (
               <Badge key={index} variant="secondary" className="text-xs">
                 {tech}
               </Badge>

@@ -8,7 +8,7 @@ const Footer = () => {
         </p>
         <p className="text-xs text-slate-200 mt-2">
           Built with <span className="text-red-500">♡</span> using React,
-          Tailwind CSS, and Shadcn/ui
+          TypeScript, Tailwind CSS, and Shadcn/ui.
         </p>
       </div>
     </footer>

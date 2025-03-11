@@ -5,10 +5,11 @@ interface Project {
   id: string;
   title: string;
   description: string;
-  technologies: string[];
+  stack: string[];
   outcomes: string[];
   imageUrl: string;
   projectUrl?: string;
+  liveUrl?: string;
 }
 
 interface ProjectsSectionProps {
@@ -17,69 +18,102 @@ interface ProjectsSectionProps {
   projects?: Project[];
 }
 
-const ProjectsSection = ({
+const Projects = ({
   title = "Projects & Challenges",
   subtitle = "Key projects completed during my HNG internship that demonstrate my technical skills and problem-solving abilities.",
   projects = [
     {
       id: "1",
-      title: "E-commerce Dashboard",
+      title: "Profile Card Component",
       description:
-        "A responsive admin dashboard for managing products, orders, and customer data with real-time analytics.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
+        "A customizable and responsive profile card component designed to display user information such as name, role, current location, current datetime and social links. The component features a clean UI with hover effects and smooth animations.",
+      stack: ["HTML", "CSS", "JavaScript"],
       outcomes: [
+        "Designed a sleek UI",
         "Implemented responsive design for all device sizes",
-        "Created interactive data visualization components",
-        "Reduced page load time by 35%",
       ],
-      imageUrl:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
-      projectUrl: "https://github.com/username/ecommerce-dashboard",
+      imageUrl: "https://i.postimg.cc/BQcDGP14/front-01.png",
+      projectUrl: "https://github.com/tonybnya/hng12-frontend-stage00",
+      liveUrl: "https://tonybnya-hng12-profile-card.onrender.com",
     },
     {
       id: "2",
-      title: "Task Management API",
+      title: "Color Game",
       description:
-        "RESTful API for a task management application with authentication, task CRUD operations, and team collaboration features.",
-      technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+        "A fun and interactive color-matching game that challenges users to guess the correct color based on given RGB values. Built with a focus on UI/UX, accessibility, and game logic.",
+      stack: ["React", "Tailwind"],
       outcomes: [
-        "Built secure authentication system with JWT",
-        "Implemented comprehensive API documentation",
-        "Achieved 95% test coverage with Jest",
+        "Enhanced user engagement through interactive gameplay",
+        "Implemented dynamic UI updates for a smooth experience",
       ],
-      imageUrl:
-        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&q=80",
-      projectUrl: "https://github.com/username/task-api",
+      imageUrl: "https://i.postimg.cc/gjvnH1P3/front-02.png",
+      projectUrl: "https://github.com/tonybnya/hng12-frontend-stage01",
+      liveUrl: "https://tonybnya-hng12-color-game.onrender.com",
     },
     {
       id: "3",
-      title: "Social Media Frontend",
+      title: "Public API for Basic Information",
       description:
-        "Modern social media application frontend with real-time messaging, post creation, and user interaction features.",
-      technologies: ["React", "Redux", "Socket.io", "SCSS"],
+        "A simple REST API that provides an email address, the current date and time in ISO 8601 format, and a GitHub repository URL. Designed for fast responses under 500ms.",
+      stack: ["Python", "Flask", "Flask-CORS"],
       outcomes: [
-        "Created responsive UI with smooth animations",
-        "Implemented real-time notifications system",
-        "Optimized image loading for better performance",
+        "Built a lightweight and efficient API with Flask",
+        "Optimized response time to be under 500ms",
+        "Implemented JSON response formatting and CORS support",
+        "Hosted and documented the API for public use",
       ],
-      imageUrl:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=80",
-      projectUrl: "https://github.com/username/social-app",
+      imageUrl: "https://i.postimg.cc/Jn6dr7Yz/back-01.png",
+      projectUrl: "https://github.com/tonybnya/hng12-backend-stage00",
+      liveUrl: "https://tonybnya-hng12-backend-stage00.onrender.com",
     },
     {
       id: "4",
-      title: "Weather Forecast App",
+      title: "Number Classification API",
       description:
-        "Weather application that provides current conditions and 5-day forecasts with location-based services and interactive maps.",
-      technologies: ["React Native", "Expo", "Weather API", "Geolocation"],
+        "Weather application that provides current conditions and 5-day forecasts with location-based services and interactive maps. Designed for fast responses under 500ms.",
+      stack: ["Python", "Flask", "Flask-CORS"],
       outcomes: [
-        "Integrated with OpenWeatherMap API",
-        "Implemented location-based weather forecasts",
-        "Created intuitive UI with animated transitions",
+        "Built a lightweight and efficient API with Flask",
+        "Optimized response time to be under 500ms",
+        "Implemented JSON response formatting and CORS support",
+        "Deployed and documented for public access",
       ],
-      imageUrl:
-        "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=400&q=80",
-      projectUrl: "https://github.com/username/weather-app",
+      imageUrl: "https://i.postimg.cc/h46j3L4f/back-02.png",
+      projectUrl: "https://github.com/tonybnya/hng12-backend-stage01",
+      liveUrl:
+        "https://tonybnya-hng12-backend-stage01.onrender.com/api/classify-number?number=2025",
+    },
+    {
+      id: "5",
+      title: "FastAPI Book API",
+      description:
+        "Weather application that provides current conditions and 5-day forecasts with location-based services and interactive maps. Designed for fast responses under 500ms.",
+      stack: ["Python", "Flask", "Flask-CORS"],
+      outcomes: [
+        "Built a lightweight and efficient API",
+        "Optimized response time to be under 500ms",
+        "Implemented JSON response formatting and CORS support",
+        "Deployed and documented for public access",
+      ],
+      imageUrl: "",
+      projectUrl: "https://github.com/tonybnya/hng12-backend-stage01",
+      liveUrl: "https://tonybnya-hng12-backend-stage01.onrender.com",
+    },
+    {
+      id: "6",
+      title: "Telex Interval Integration/Plugin",
+      description:
+        "Weather application that provides current conditions and 5-day forecasts with location-based services and interactive maps. Designed for fast responses under 500ms.",
+      stack: ["Python", "Flask", "Flask-CORS"],
+      outcomes: [
+        "Built a lightweight and efficient API with Express",
+        "Optimized response time to be under 500ms",
+        "Implemented JSON response formatting and CORS support",
+        "Deployed and documented for public access",
+      ],
+      imageUrl: "",
+      projectUrl: "https://github.com/tonybnya/hng12-backend-stage01",
+      liveUrl: "https://tonybnya-hng12-backend-stage01.onrender.com",
     },
   ],
 }: ProjectsSectionProps) => {
@@ -110,10 +144,11 @@ const ProjectsSection = ({
               <ProjectCard
                 title={project.title}
                 description={project.description}
-                technologies={project.technologies}
+                stack={project.stack}
                 outcomes={project.outcomes}
                 imageUrl={project.imageUrl}
                 projectUrl={project.projectUrl}
+                liveUrl={project.liveUrl}
               />
             </motion.div>
           ))}
@@ -123,4 +158,4 @@ const ProjectsSection = ({
   );
 };
 
-export default ProjectsSection;
+export default Projects;
