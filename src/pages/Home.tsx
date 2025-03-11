@@ -24,10 +24,10 @@ const Home = () => {
       <Projects />
 
       {/* Timeline Section */}
-      <Timeline />
+      {/* <Timeline /> */}
 
       {/* Testimonials Section */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* Footer Section */}
       <Footer />
