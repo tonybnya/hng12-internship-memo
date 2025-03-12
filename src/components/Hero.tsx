@@ -92,7 +92,9 @@ const Hero = ({
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button className="group">
-              Explore Projects
+              <a href="#projects" className="text-white">
+                Explore Projects
+              </a>
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <div className="flex items-center gap-3 mt-4 sm:mt-0">
