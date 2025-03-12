@@ -91,7 +91,7 @@ const Hero = ({
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button className="group">
+            <Button className="group animate-pulse">
               <a href="#projects" className="text-white">
                 Explore Projects
               </a>
